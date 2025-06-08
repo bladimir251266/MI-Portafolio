@@ -65,7 +65,7 @@ const informacionPersonal = {
   otros: [
     ["Titulo", "Ingeniero de Sistemas"],
     [
-      "Nacioanlidad","Colombiano",
+      "Nacionalidad","Colombiano",
       /*"Edad",
       new Date(new Date() - new Date("1966/12/25")).getFullYear() - 1970 +
         " años",*/
