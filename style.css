@@ -1,0 +1,253 @@
+:root {
+  /* Definición de variables de color para facilitar su uso en todo el documento */
+  --color-text-titulos: #ffffff; /* Color para los títulos */
+  --color-texto: rgba(255, 255, 255, 0.867); /* Color para el texto normal */
+  --color-acento: #E6E4C6; /* Color de acento para elementos destacados */
+  --color-fondo: #0E3A47; /* Color de fondo principal */
+  --color-fondo-tarjeta: #ffffff27; /* Color de fondo para tarjetas con transparencia */
+}
+
+body {
+  /* Estilos generales del cuerpo del documento */
+  background-color: var(--color-fondo); /* Aplicar color de fondo */
+  margin: 0; /* Eliminar márgenes por defecto */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Tipografía */
+  display: grid; /* Usar un sistema de cuadrícula */
+  grid-template-columns: 220px 1fr; /* Definir columnas: 220px para el aside y el resto para el main */
+  grid-template-areas: 
+    "aside header" /* Área del aside y header en la parte superior */
+    "aside main" /* Área del aside y main en el cuerpo */
+    "footer footer"; /* Área del footer en la parte inferior */
+}
+
+h1,h2, h3, h4, h5, h6 {
+  /* Estilo para todos los encabezados */
+  color: var(--color-text-titulos); /* Color de texto para títulos */
+}
+
+h1 {
+  font-size: xxx-large; /* Tamaño de fuente específico para el h1 */
+}
+
+p, span, h3 {
+  /* Estilo para párrafos, spans y h3 */
+  color: var(--color-texto); /* Color de texto */
+}
+
+header {
+  /* Estilos para la cabecera del documento */
+  margin-left: 20px; /* Margen izquierdo */
+  grid-area: header; /* Definir área de la cuadrícula */
+  background-image: url("./img/TALENTOTECH.png"); /* Imagen de fondo */
+  background-color: #73b091; /* Color de fondo alternativo */
+  display: flex; /* Usar flexbox para organizar el contenido */
+  justify-content: space-between; /* Espaciado entre elementos */
+  border-bottom-left-radius: 5px; /* Bordes redondeados en la esquina inferior izquierda */
+}
+
+header div {
+  padding: 40px; /* Espaciado interno para divs dentro del header */
+}
+
+header a {
+  padding: 10px 40px; /* Espaciado interno para enlaces */
+  border-radius: 5px; /* Bordes redondeados para enlaces */
+}
+
+header img {
+  /* Estilos para imágenes en el header */
+  margin-top: auto; /* Margen superior automático para alinear al final */
+  max-height: 300px; /* Altura máxima de la imagen */
+  flex-shrink: 1; /* Permitir que la imagen se reduzca si es necesario */
+  margin-right: 50px; /* Margen derecho */
+}
+
+main {
+  grid-area: main; /* Definir área de la cuadrícula para el main */
+  margin: 0 20px; /* Margen horizontal */
+}
+
+#proyectosContainer {
+  /* Contenedor para proyectos */
+  display: flex; /* Usar flexbox para la disposición */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  gap: 20px; /* Espacio entre elementos */
+  justify-content: space-between; /* Espaciado entre elementos */
+  margin: auto; /* Centrar el contenedor */
+}
+
+.proyecto {
+  /* Estilo para cada proyecto */
+  flex-basis: 314px; /* Base de flex para el ancho */
+  flex-grow: 1; /* Permitir que crezca si hay espacio */
+  flex-shrink: 1; /* Permitir que se reduzca si es necesario */
+  display: flex; /* Usar flexbox para la disposición interna */
+  flex-direction: column; /* Disposición vertical */
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); /* Sombra alrededor del proyecto */
+  overflow: hidden; /* Ocultar contenido que desborde */
+}
+
+.proyecto img {
+  height: 150px; /* Altura de las imágenes de proyectos */
+  object-fit: cover; /* Ajustar la imagen para cubrir el área */
+  filter: grayscale(0.8); /* Aplicar filtro en escala de grises */
+  transition: 0.2s; /* Transición suave para cambios */
+}
+
+.proyecto:hover img {
+  filter: grayscale(0); /* Remover filtro en hover */
+}
+
+.proyecto div {
+  margin: 0 20px; /* Margen horizontal para el contenido del proyecto */
+}
+
+a {
+  /* Estilo general para enlaces */
+  display: inline-block; /* Mostrar como bloque en línea */
+  background-color: var(--color-acento); /* Color de fondo */
+  color: var(--color-fondo); /* Color de texto */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Negrita */
+}
+
+a.disabled {
+  /* Estilo para enlaces deshabilitados */
+  background-color: rgb(195, 195, 195); /* Color de fondo para deshabilitados */
+  text-decoration: line-through; /* Subrayado para indicar desactivación */
+}
+
+.proyecto a {
+  /* Estilo específico para enlaces dentro de proyectos */
+  display: block; /* Mostrar como bloque */
+  margin-top: auto; /* Margen superior automático para alinear al final */
+  text-align: center; /* Centrar texto */
+  padding: 5px 10px; /* Espaciado interno */
+}
+
+.tarjeta {
+  /* Estilo para tarjetas */
+  background-color: var(--color-fondo-tarjeta); /* Color de fondo */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.tecnologia {
+  /* Estilo para elementos de tecnología */
+  transition: 0.5s; /* Transición suave */
+  user-select: none; /* Deshabilitar selección de texto */
+  margin-right: 2px; /* Margen derecho */
+}
+
+.tecnologia:hover {
+  color: var(--color-acento); /* Cambiar color en hover */
+}
+
+footer {
+  grid-area: footer; /* Definir área de la cuadrícula para el footer */
+  text-align: center; /* Centrar texto en el footer */
+}
+
+aside {
+  /* Estilos para el aside */
+  padding: 20px; /* Espaciado interno */
+  grid-area: aside; /* Definir área de la cuadrícula */
+  border-top-left-radius: 0 !important; /* Eliminar borde redondeado superior izquierdo */
+  border-bottom-left-radius: 0 !important; /* Eliminar borde redondeado inferior izquierdo */
+}
+
+aside > div {
+  /* Estilo para divs dentro del aside */
+  padding: 20px 0; /* Espaciado vertical */
+  border-bottom: 2px solid var(--color-fondo); /* Línea inferior */
+}
+
+aside > div:last-of-type {
+  border-bottom: unset; /* Eliminar línea inferior en el último div */
+}
+
+aside img {
+  /* Estilos para imágenes dentro del aside */
+  display: block; /* Mostrar como bloque */
+  margin: auto; /* Centrar imagen */
+  max-width: 100%; /* Ancho máximo */
+  max-height: 150px; /* Altura máxima */
+}
+
+#presentacion div, #idiomas div, #tecnologias div {
+  /* Estilo para divs dentro de secciones específicas */
+  display: flex; /* Usar flexbox para disposición */
+  justify-content: space-between; /* Espaciado entre elementos */
+}
+
+aside div span:last-child {
+  /* Estilo para el último span dentro de divs del aside */
+  color: var(--color-text-titulos); /* Color de texto para el último span */
+}
+
+/* Estilo del elemento progress */
+progress {
+  -webkit-appearance: none; /* Eliminar apariencia por defecto en WebKit */
+  width: 100%; /* Ancho completo */
+}
+
+::-webkit-progress-inner-element {
+  height: 5px; /* Altura del elemento interno */
+}
+
+/* Parte seleccionada del progress */
+::-webkit-progress-value {
+  background-color: var(--color-acento); /* Color de la parte completada */
+}
+
+/* Fondo del progress */
+::-webkit-progress-bar {
+  background-color: var(--color-fondo); /* Color del fondo del progress */
+}
+
+#redes {
+  /* Estilo para el contenedor de redes sociales */
+  display: flex; /* Usar flexbox para disposición */
+  justify-content: space-around; /* Espaciado entre elementos */
+  height: 20px; /* Altura del contenedor */
+}
+
+#redes a {
+  /* Estilo para enlaces dentro del contenedor de redes */
+  background-color: unset; /* Sin fondo */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el enlace */
+}
+
+#redes img:hover {
+  filter: invert(1); /* Invertir colores de la imagen en hover */
+}
+
+#redes img {
+  /* Estilos para imágenes dentro del contenedor de redes */
+  aspect-ratio: 1; /* Mantener proporción cuadrada */
+  height: 20px; /* Altura de la imagen */
+  filter: invert(0.8); /* Filtro de inversión de color */
+  transition: 0.5s; /* Transición suave */
+}
+
+footer a {
+  /* Estilo para enlaces dentro del footer */
+  color: var(--color-texto); /* Color de texto */
+  background-color: unset; /* Sin fondo */
+}
+
+/* Media query para dispositivos móviles */
+@media(max-width: 650px) {
+  header {
+    margin-left: unset; /* Eliminar margen izquierdo en móviles */
+    border-radius: unset; /* Eliminar bordes redondeados */
+  }
+
+  header img {
+    display: none; /* Ocultar imágenes en el header en móviles */
+  }
+
+  body {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna */
+    grid-template-areas: "header" "aside" "main" "footer"; /* Reorganizar áreas */
+  }
+}
