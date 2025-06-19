@@ -36,13 +36,13 @@ const proyectos = [
     tecnologias: ["PHP"],
   },
   {
-    titulo: "Cotizador comercial",
+    titulo: "Servidor Backend construido con Node.js y Express.js",
     descripcion:
-      "Herramienta online que permite cotizar servicios a distintos clientes, hecho para una empresa masiva.",
-    link: "",
-    fecha: "01/06/2021",
-    imagen: "NDA.png",
-    tecnologias: ["HTML", "CSS", "Javascript"],
+      "construido con Node.js y Express.js, que se encarga de manejar las solicitudes HTTP y comunicarse con una base de datos MySQL para gestionar clientes.",
+    link: "https://github.com/bladimir251266/full-stack-basico",
+    fecha: "19/06/2025",
+    imagen: "regclientes.png",
+    tecnologias: ["HTML", "CSS", "Javascript", "NodeJs", "Express.js", "MySQL"],
   },
   {
     titulo: "Página web Freelance",
