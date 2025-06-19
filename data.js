@@ -36,7 +36,7 @@ const proyectos = [
     tecnologias: ["PHP"],
   },
   {
-    titulo: "Servidor Backend construido con Node.js y Express.js",
+    titulo: "full-stack-basico - Registro de clientes",
     descripcion:
       "construido con Node.js y Express.js, que se encarga de manejar las solicitudes HTTP y comunicarse con una base de datos MySQL para gestionar clientes.",
     link: "https://github.com/bladimir251266/full-stack-basico",
